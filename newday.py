@@ -25,7 +25,7 @@ with open("../input/Day"+{day}) as input:
 """.format(day=day)
     currentdir = os.getcwd()
     print(currentdir)
-    os.mkdir(currentdir + "/Day" + day)
-    with open(currentdir + "/Day" + day + "/run.py", "w") as file:
+    os.makedirs(currentdir + "/AdventOfCode/2023/Day" + day)
+    with open(currentdir + "/AdventOfCode/2023/Day" + day + "/run.py", "w") as file:
         file.write(s)
     print("Success")
