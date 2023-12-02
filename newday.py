@@ -12,20 +12,23 @@ import os
 
 def part1(input_text):
     # Code goes here
-    print("Part 1: " + part1_answer)
+    return ("Part 1: " + part1_answer)
 
 def part2(input_text):
     # Code goes here
-    print("Part 2: " + part2_answer)
+    return ("Part 2: " + part2_answer)
 
-with open("../input/Day"+{day}) as input:
-    # Code goes here
-    part1(input)
-    part2(input)
+# TODO Make this cleaner, it makes me sad :(
+with open("../input/Day1.txt", "r") as input:
+    print(part1(input))
+
+with open("../input/Day1.txt", "r") as input:
+    print(part2(input))
+
 """.format(day=day)
     currentdir = os.getcwd()
     print(currentdir)
-    os.makedirs(currentdir + "/AdventOfCode/2023/Day" + day)
-    with open(currentdir + "/AdventOfCode/2023/Day" + day + "/run.py", "w") as file:
+    os.makedirs(currentdir + "/Challenges/2023/Day" + day)
+    with open(currentdir + "/Challenges/2023/Day" + day + "/run.py", "w") as file:
         file.write(s)
     print("Success")
